@@ -10,3 +10,5 @@ Exercises that cover:
 - Security and Criptography
 - Connections and Sockets
 - Spring Dependency injection / Beans
+- Testing JUnit 5
+
