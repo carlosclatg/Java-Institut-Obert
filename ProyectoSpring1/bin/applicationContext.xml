@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd
+">
+<!-- Carga de fichero de propiedades -->
+
+<context:property-placeholder location="classpath:datosEmpresa.propiedades" />
+
+<!-- creacion de la dependencia -->
+<bean id="miInforme" class="inversionofcontrol.Informe"> </bean>
+
+
+<!--Para cambiar la inyeccion de dependenvias, cambiamos la clase de aqui-->
+<bean id="miEmpleado" class="inversionofcontrol.JefeEmpleado">
+	<constructor-arg ref="miInforme"></constructor-arg>
+	<property name="email" value="${email}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+</bean>
+
+<!--Para inyectar la dependencia desde un setter, en el name se pone el setter sin el set y la primera en minuscula-->
+<bean id="miSecretarioEmpleado" class="inversionofcontrol.SecretarioEmpleado">
+	<property name="informeNuevo" ref="miInforme"></property>
+	<property name="email" value="secretaria@ccl.com"></property>
+	<property name="nombreEmpresa" value="miEmpresaCarlosCalvo"></property>
+</bean>
+
+</beans>

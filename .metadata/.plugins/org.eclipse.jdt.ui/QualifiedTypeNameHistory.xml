@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="inversionofcontrol.UsoEmpleados"/>
+<fullyQualifiedTypeName name="inversionofcontrol.CreacionInformes"/>
+<fullyQualifiedTypeName name="inversionofcontrol.JefeEmpleado"/>
+<fullyQualifiedTypeName name="inversionofcontrol.SecretarioEmpleado"/>
+<fullyQualifiedTypeName name="inversionofcontrol.Empleados"/>
+<fullyQualifiedTypeName name="pruebaAnnotations.Empleados"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="gestors.GestorException"/>
+<fullyQualifiedTypeName name="test.Junit"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.junit.Rule"/>
+<fullyQualifiedTypeName name="org.junit.internal.runners.statements.ExpectException"/>
+<fullyQualifiedTypeName name="org.junit.rules.ExpectedException"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.function.Executable"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+</qualifiedTypeNameHistroy>

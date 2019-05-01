@@ -1,0 +1,31 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Testing {
+
+	@Test
+	void concatening() {
+		Junit test = new Junit();
+		String result = test.ConcatenatenName("one", "two");
+		assertEquals(result, "onetwo");	
+	}
+	
+	@Test
+	void concateningbasic2() {
+		Junit test = new Junit();
+		String result = test.ConcatenatenName("three", "four");
+		assertEquals(result, "threefour");	
+		assertNotEquals(result, "not");
+	}
+	
+	@Test
+	void test() {
+		Junit test = new Junit();
+		int result = test.multiply(3, 4);
+		assertEquals(result, 12);	
+	}
+
+}

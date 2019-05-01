@@ -1,0 +1,19 @@
+package test;
+
+public class Junit {
+
+	public String ConcatenatenName(String one, String two) {
+		return one + two;
+	}
+
+	public int multiply(int number1, int number2) throws Exception {
+		if(number1 == -1) {
+			throw new Exception("-1");
+		}
+		
+		return number1 * number2;
+		
+		
+	}
+
+}

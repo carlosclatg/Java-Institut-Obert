@@ -1,0 +1,16 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ConcatTest2 {
+
+	@Test
+	void test1() {
+		Junit test = new Junit();
+		String result = test.ConcatenatenName("one", "two");
+		assertEquals(result, "onetwo");	
+	}
+
+}

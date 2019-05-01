@@ -1,0 +1,62 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Rule;
+import org.junit.internal.runners.statements.ExpectException;
+import org.junit.jupiter.api.Test;
+import org.junit.rules.ExpectedException;
+
+class Testing {
+	
+	@Rule public ExpectedException exception = ExpectedException.none();
+
+	@Test
+	void concatening() {
+		Junit test = new Junit();
+		String result = test.ConcatenatenName("one", "two");
+		assertEquals(result, "onetwo");	
+	}
+	
+	@Test
+	void concateningbasic2() {
+		Junit test = new Junit();
+		String result = test.ConcatenatenName("three", "four");
+		assertEquals(result, "threefour");	
+		assertNotEquals(result, "not");
+	}
+	
+	@Test
+	void test() {
+		Junit test = new Junit();
+		try {
+			int result = test.multiply(3, 4);
+			assertEquals(result, 12);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+			
+	}
+	
+	@Test
+	void testmultiply2() {
+		Junit test = new Junit();
+		try {
+			int result = test.multiply(0, 4);
+			assertEquals(result, 0);	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	
+	@Test(expected=Exception.class)
+	void shouldThrowException() {
+		Junit test = new Junit();
+		int result = test.multiply(0, 4);
+		assertEquals(-1, 4);	
+	
+		
+	}
+
+}
