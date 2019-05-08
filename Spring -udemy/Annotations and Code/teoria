@@ -1,0 +1,58 @@
+Annotations basics
+
+1. Enable component scanning in config file <context:component-scan base-package="com.luv2...."/>
+2. Add the @component("bean Id") annotation in java class 
+3. Retrieve bean. Coach theCoach = context.getBean("bean Id", Coach.class)
+
+Default Bean Id --> className with first letter lowercase Example TennisCoach --> tennisCoach
+
+
+Helper = FortuneService
+
+
+
+Autowiring example:
+
+1. Inject FortuneService into Coach implement
+2. Spring will scan @components
+3. ANy one implements FortuneService?
+4. If so, inject them!
+
+Autowiring Injection Types
+
+1. Constructor
+2. Setter
+3. Field
+
+
+CONSTRUCTOR INJECTION
+1. Define dependency interface and class
+2. Create a constrcutor
+3. Autowired annotation in the constrcutor (the parameter of the constructor is autowired)
+
+
+SETTER INJECTION
+1. Create Setter methods for interface field
+2. Autowired Annotation in the setter, search a component that implements interface and injects.
+
+
+Method injection
+1. Se puede inyectar sobre cualquier metodo, siempre que tenga la annotation de autowired.
+
+
+FIELD INJECTION
+Example:
+@Autowired
+private FortuneService fortuneService;
+
+
+
+When Spring creates the beans it follows this general process
+
+1. Construct an instance of class
+2. Inject dependencies
+3. Set properties etc (@Value)
+
+
+
+If Multiple FortuneService implementations?? -->Qualifier("classthatimplementsinterfaceinlowercase")

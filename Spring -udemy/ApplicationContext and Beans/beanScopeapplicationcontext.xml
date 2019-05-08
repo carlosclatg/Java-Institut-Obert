@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- Define your beans here -->
+  	<bean id="myLoggerConfig" class="com.luv2code.springdemo.MyLoggerConfig" init-method="initLogger">
+    	<property name="rootLoggerLevel" value="FINE" />
+    	<property name="printedLoggerLevel" value="FINE"/>
+    </bean>
+    
+<!-- metodo init, normalmente se trata de void(sin return), con cualquier acceso(public, protected, private...)  y no acepta argumentos -->
+    <bean id="myCoach"
+   		class="com.luv2code.springdemo.TrackCoach"
+   		init-method="doBeforeSomeStuff"
+   		destroy-method="doDestroySomeStuff"
+   		>
+   		<!-- For prototype scope spring does not call destroy-methods -->
+   		<!-- set up constructor injection -->
+   		<constructor-arg ref="myFortune"></constructor-arg>
+   	</bean>
+   	
+   	<!-- Bean que define la clase que implementa la interfaz que está definida en la clase del bean myCoach y coge el método de ahi -->
+    <bean id="myFortune"
+    	class="com.luv2code.springdemo.HappyFortuneService">
+    </bean>
+    
+</beans>
+
+
+
+
+

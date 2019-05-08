@@ -1,0 +1,21 @@
+default scope = singleton solo una isntancia que está cacheada en memoria. (patrón de diseño), normalmente para cosas stateless
+<bean scope="">
+otros scope = prototype, request (web), session(web), global-session(web).
+
+prototype for stateful objects´
+
+
+Bean Lifecycle
+
+1. Bean instantiated
+2. Dependencies injected
+3. Procesos internos spring
+4. Init Method (logic, sockets, file, DB...)
+5. Destroy method (logic, sockets, file, DB...)
+
+
+Annotations
+
+1. Enable component scanning in config file <context:component-scan base-package="com.luv2...."/>
+2. Add the @component("bean Id") annotation in java class 
+3. Retrieve bean. Coach theCoach = context.getBean("bean Id", Coach.class)
