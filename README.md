@@ -11,4 +11,8 @@ Exercises that cover:
 - Connections and Sockets
 - Spring Dependency injection / Beans
 - Testing JUnit 5
+- Spring
+- Hibernate
+- REST API using Spring
+- CRUD REST API using Spring
 
