@@ -10,7 +10,7 @@ public class ReferenceMethod {
 		consumidor.accept("hola");
 
 			
-		
+		//Consumer normally process data but no return is expected
 		Consumer<String> consumer1=s->{
 			System.out.println(s+" World.");
 		};
@@ -21,6 +21,9 @@ public class ReferenceMethod {
 		//Using andThen method
 		consumer1.andThen(consumer2).accept("Hello world");
 		}
+	
+		//Hello world World
+		//Hello world Java
 
 	
 
