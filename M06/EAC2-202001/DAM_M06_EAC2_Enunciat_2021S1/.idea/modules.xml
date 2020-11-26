@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DAM_M06_EAC2_Enunciat_2021S1.iml" filepath="$PROJECT_DIR$/.idea/DAM_M06_EAC2_Enunciat_2021S1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercici1/Exercici1.iml" filepath="$PROJECT_DIR$/Exercici1/Exercici1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercici2/Exercici2.iml" filepath="$PROJECT_DIR$/Exercici2/Exercici2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercici2/test/test.iml" filepath="$PROJECT_DIR$/Exercici2/test/test.iml" />
+    </modules>
+  </component>
+</project>
